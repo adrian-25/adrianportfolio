@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: 'class',
+  theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
+    extend: {
+      colors: {
+        background: { DEFAULT: 'var(--background)' },
+        foreground: { DEFAULT: 'var(--foreground)' },
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          foreground: 'var(--secondary-foreground)',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          foreground: 'var(--accent-foreground)',
+        },
+        muted: {
+          DEFAULT: 'var(--muted)',
+          foreground: 'var(--muted-foreground)',
+        },
+        card: {
+          DEFAULT: 'var(--card)',
+          foreground: 'var(--card-foreground)',
+        },
+        border: { DEFAULT: 'var(--border)' },
+        input: { DEFAULT: 'var(--input)' },
+        ring: { DEFAULT: 'var(--ring)' },
+      },
+      borderRadius: {
+        DEFAULT: 'var(--radius)',
+        xl: 'calc(var(--radius) + 4px)',
+        '2xl': 'calc(var(--radius) + 8px)',
+        '3xl': 'calc(var(--radius) + 16px)',
+        '4xl': 'calc(var(--radius) + 24px)',
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)', 'sans-serif'],
+      },
+      backgroundImage: {
+        'grid-pattern': "linear-gradient(rgba(110,231,183,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(110,231,183,0.03) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        'grid': '60px 60px',
+      },
+    },
+  },
+  plugins: [require('@tailwindcss/typography')],
+};
