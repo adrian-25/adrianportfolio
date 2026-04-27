@@ -111,11 +111,11 @@ export default function HeroSection() {
             View Projects
           </button>
           <a
-            href="/resume.pdf"
-            download
+            href="/Adrian__Dsouza.pdf"
+            download="Adrian__Dsouza_Resume.pdf"
             className="px-8 py-4 rounded-full glass border font-bold text-sm uppercase tracking-widest text-foreground hover:border-primary/40 hover:text-primary transition-all duration-300"
           >
-            Download Resume
+            DOWNLOAD RESUME
           </a>
           <button
             onMouseMove={handleMagneticMove}
