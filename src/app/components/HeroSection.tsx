@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 
 const badges = [
@@ -45,12 +46,20 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center px-6 md:px-10 pt-24 pb-16 overflow-hidden"
       aria-label="Hero"
     >
-      {/* Decorative ring */}
-      <div className="absolute right-8 top-1/3 w-[400px] h-[400px] hidden lg:block pointer-events-none" aria-hidden="true">
+      {/* Portrait framed by the animated ring */}
+      <div className="absolute right-8 top-1/3 w-[400px] h-[400px] hidden lg:block" aria-label="Portrait of Adrian Dsouza">
         <div className="w-full h-full border border-primary/5 rounded-full animate-spin-slow absolute inset-0" />
         <div className="absolute inset-8 border border-dashed border-secondary/8 rounded-full animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '30s' }} />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-3 h-3 rounded-full bg-primary/40 animate-pulse-glow" />
+        <div className="absolute inset-5 overflow-hidden rounded-full border border-primary/30 bg-muted shadow-[0_0_50px_rgba(110,231,183,0.16)]">
+          <Image
+            src="/assets/images/adrian-dsouza.jpg"
+            alt="Adrian Dsouza"
+            fill
+            priority
+            sizes="400px"
+            className="object-cover object-[50%_32%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/25 via-transparent to-transparent" aria-hidden="true" />
         </div>
       </div>
 
@@ -111,8 +120,8 @@ export default function HeroSection() {
             View Projects
           </button>
           <a
-            href="/Adrian__Dsouza.pdf"
-            download="Adrian__Dsouza_Resume.pdf"
+            href="/Adrian__Dsouza_Resume.pdf"
+            download="Adrian__Dsouza_260427_161400.pdf"
             className="px-8 py-4 rounded-full glass border font-bold text-sm uppercase tracking-widest text-foreground hover:border-primary/40 hover:text-primary transition-all duration-300"
           >
             DOWNLOAD RESUME
@@ -131,8 +140,8 @@ export default function HeroSection() {
         {/* Stats row */}
         <div className="reveal-up stagger-6 flex flex-wrap gap-8 mt-14 pt-8 border-t border-border/50">
           {[
-            { val: '4+', label: 'Projects Deployed' },
-            { val: '3', label: 'Active Internships' },
+            { val: '6', label: 'Live Projects' },
+            { val: '4', label: 'Internships' },
             { val: '90+', label: 'DSA Problems' },
             { val: '5+', label: 'Certifications' },
           ].map((s) => (

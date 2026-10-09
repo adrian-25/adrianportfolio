@@ -21,13 +21,13 @@ const skillCategories: SkillCategory[] = [
     colSpan: 'md:col-span-2',
   },
   {
-    title: 'Machine Learning & Data',
+    title: 'Machine Learning',
     skills: ['Pandas', 'NumPy', 'Scikit-learn', 'K-Means Clustering', 'Feature Engineering', 'Data Preprocessing'],
     accent: 'text-primary border-primary/20',
     colSpan: 'col-span-1',
   },
   {
-    title: 'Data Analysis & Visualization',
+    title: 'Data Analysis',
     skills: ['EDA', 'Data Cleaning', 'Matplotlib'],
     accent: 'text-secondary border-secondary/20',
     colSpan: 'col-span-1',
@@ -39,14 +39,14 @@ const skillCategories: SkillCategory[] = [
     colSpan: 'col-span-1',
   },
   {
-    title: 'Tools & Platforms',
+    title: 'Tools',
     skills: ['GitHub', 'Google Colab', 'VS Code', 'Microsoft Azure'],
     accent: 'text-muted-foreground border-border',
     colSpan: 'col-span-1',
   },
   {
     title: 'Core Concepts',
-    skills: ['DSA', 'OOP', 'REST APIs', 'Artificial Intelligence'],
+    skills: ['Data Structures & Algorithms', 'OOP', 'REST APIs', 'Artificial Intelligence'],
     accent: 'text-secondary border-secondary/20',
     colSpan: 'col-span-1',
   },

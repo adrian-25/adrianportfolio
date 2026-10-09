@@ -16,9 +16,9 @@ const achievements = [
     color: 'text-primary',
   },
   {
-    value: '4+',
-    label: 'Deployed Applications',
-    description: 'Full-stack and AI-based apps live on production — not just local demos.',
+    value: '6',
+    label: 'Live Applications',
+    description: 'Full-stack and AI-based apps deployed for people to explore online.',
     color: 'text-secondary',
   },
 ];
@@ -85,8 +85,8 @@ export default function CertificationsSection() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground text-sm">3 Active Internships</p>
-                  <p className="text-muted-foreground text-xs">UptoSkills · iStudio · CodeB</p>
+                  <p className="font-bold text-foreground text-sm">Internship Experience</p>
+                  <p className="text-muted-foreground text-xs">Zeno Talent · UptoSkills · iStudio · CodeB</p>
                 </div>
               </div>
             </div>

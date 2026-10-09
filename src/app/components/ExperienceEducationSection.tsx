@@ -3,7 +3,6 @@ import React from 'react';
 interface Experience {
   role: string;
   company: string;
-  status: string;
   points: string[];
   accent: string;
 }
@@ -18,32 +17,38 @@ interface Education {
 
 const experiences: Experience[] = [
   {
+    role: 'AI/ML Training Intern',
+    company: 'Zeno Talent · Remote',
+    points: [
+      'Three-month AI/ML training and internship program.',
+      'Building essential AI/ML skills and tools through training and project-based work.',
+    ],
+    accent: 'border-primary/30 bg-primary/5',
+  },
+  {
     role: 'AI/ML Intern',
     company: 'UptoSkills',
-    status: 'Ongoing',
     points: [
-      'Working on machine learning projects and real-world implementations',
-      'Hands-on experience in Python, data analysis, and ML models',
+      'Working on real-world machine learning projects and AI-based applications',
+      'Performing data preprocessing, model building, and evaluation using Python',
     ],
     accent: 'border-primary/30 bg-primary/5',
   },
   {
     role: 'Machine Learning Intern',
     company: 'iStudio',
-    status: 'Ongoing',
     points: [
-      'Implementing machine learning algorithms on practical problems',
-      'Working on ML-based applications end-to-end',
+      'Implementing machine learning algorithms on real-world datasets',
+      'Gaining hands-on experience in supervised and unsupervised learning',
     ],
     accent: 'border-secondary/30 bg-secondary/5',
   },
   {
     role: 'Data Science Intern',
     company: 'CodeB (via IT Vedant)',
-    status: 'Completed',
     points: [
-      'Data analysis, preprocessing, and ML-based tasks',
-      'Hands-on experience with real-world datasets',
+      'Performed data analysis and preprocessing on real-world datasets',
+      'Built insights using Python and visualization tools',
     ],
     accent: 'border-border bg-muted/20',
   },
@@ -59,16 +64,16 @@ const education: Education[] = [
   },
   {
     degree: 'HSC (12th Grade)',
-    institution: 'Higher Secondary',
+    institution: 'Nirmala Memorial College',
     period: '2023',
     metric: '50%',
     metricLabel: 'Score',
   },
   {
     degree: 'SSC (10th Grade)',
-    institution: 'Secondary School',
+    institution: 'Boys High School, Sagar',
     period: '2021',
-    metric: '77%',
+    metric: '76.8%',
     metricLabel: 'Score',
   },
 ];
@@ -97,14 +102,11 @@ export default function ExperienceEducationSection() {
                 key={exp.company}
                 className={`reveal-left stagger-${i + 1} glass rounded-2xl p-6 border ${exp.accent} hover:border-primary/30 transition-all duration-400 group`}
               >
-                <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="mb-4">
                   <div>
                     <h3 className="font-bold text-foreground text-lg leading-tight">{exp.role}</h3>
                     <p className="text-primary text-sm font-semibold mt-0.5">{exp.company}</p>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shrink-0 ${exp.status === 'Ongoing' ? 'bg-primary/10 text-primary border border-primary/20' : 'bg-muted text-muted-foreground border border-border'}`}>
-                    {exp.status}
-                  </span>
                 </div>
                 <ul className="space-y-2">
                   {exp.points.map((pt, j) => (
